@@ -1,24 +1,20 @@
 'use strict';
 
 angularApp.controller('LoginCtrl', function($scope, currentUser){
- 	
-  // binding  
-  $scope.user = currentUser.getUser;
+  
+  $scope.isLoggedIn;
 
-  $scope.isLoggedIn = function () {
-  		if ($scope.user()) {
-  			return true;
-  		}
-  		else
-  		{
-  			return false;
-  		}
-  };
+  $scope.$on('login', function(event, args) {
+    $scope.isLoggedIn = true;
+    $scope.userName = args.name;
+  });
 
-  $scope.login = function(email, password) {
+  $scope.$on('logout', function(event, args) {
+    $scope.isLoggedIn = false;
+  });
 
+  $scope.login = function(email, password){
   	currentUser.login(email, password);
-
   };
 
 });

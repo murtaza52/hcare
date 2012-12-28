@@ -1,30 +1,24 @@
 module.exports = function( grunt ) {
-  'use strict';
   
-  // Load the grunt contrib 
-  grunt.loadNpmTasks('grunt-contrib');
-
   //
   // Grunt configuration:
   //
   // https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
-  //
   grunt.initConfig({
 
     // Project configuration
     // ---------------------
 
+    // compile .jade files using jade
     jade: {
-      compile: {
+      html: {
+        src: ['app/jade/*.jade', 'app/jade/**/*.jade',
+        'app/jade/!_*.jade', 'app/jade/**/!_*.jade'],
+        dest: 'app/views/',
         options: {
-          pretty:true,
-          data: {
-            debug: true
-          }
-        },
-        files: {
-          "app/views/": "app/jade/*.jade",
-          "app/index.html": "app/index.jade",
+          client: false,
+          basePath: 'app/jade',
+          pretty: true
         }
       }
     },
@@ -74,6 +68,13 @@ module.exports = function( grunt ) {
           'app/styles/**/*.{scss,sass}'
         ],
         tasks: 'compass reload'
+      },
+      jade: {
+        files: [
+          'app/jade/*.jade',
+          'app/jade/**/*.jade'
+        ],
+        tasks: 'jade'
       },
       reload: {
         files: [
@@ -179,11 +180,15 @@ module.exports = function( grunt ) {
     // setup)
     rjs: {
       // no minification, is done by the min task
+    },
       optimize: 'none',
       baseUrl: './scripts',
       wrap: true
-    }
   });
+
+  // Load the grunt contrib 
+  grunt.loadNpmTasks('grunt-jade');
+
 
   // Alias the `test` task to run `testacular` instead
   grunt.registerTask('test', 'run the testacular test driver', function () {

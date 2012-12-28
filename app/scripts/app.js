@@ -12,7 +12,8 @@ var angularApp = angular.module('angularApp', [])
       });
   }]);
 
-angularApp.run(function(){
-  
-  
+angularApp.run(function($rootScope){
+  // $rootScope.$on('login', function(event, msg){
+  //   $rootScope.$broadcast('login', msg);
+  // });
 });
