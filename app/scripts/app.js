@@ -6,9 +6,6 @@ var angularApp = angular.module('angularApp', [])
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
   }]);
 
@@ -17,3 +14,8 @@ angularApp.run(function($rootScope){
   //   $rootScope.$broadcast('login', msg);
   // });
 });
+
+
+      //.otherwise({
+      //  redirectTo: '/'
+      //});

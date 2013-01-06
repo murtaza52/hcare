@@ -6158,16 +6158,21 @@ a.label:hover, a.badge:hover {
 }
 
 /* line 3, ../../app/styles/main.scss */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
+
+/* line 5, ../../app/styles/main.scss */
 html, body {
   height: 100%;
 }
 
-/* line 7, ../../app/styles/main.scss */
+/* line 9, ../../app/styles/main.scss */
 .icon-blue {
   background-image: url("../img/glyphicons-halflings-blue.png");
 }
 
-/* line 11, ../../app/styles/main.scss */
+/* line 13, ../../app/styles/main.scss */
 .sidebar {
   background-color: white;
   width: 100%;
@@ -6175,97 +6180,97 @@ html, body {
 }
 
 /* make the container stick to the columns */
-/* line 18, ../../app/styles/main.scss */
+/* line 20, ../../app/styles/main.scss */
 .container-fluid {
   padding-left: 0px;
   height: 100%;
   padding-right: 0px;
 }
 
-/* line 24, ../../app/styles/main.scss */
+/* line 26, ../../app/styles/main.scss */
 .row-fluid {
   height: 100%;
 }
 
-/* line 28, ../../app/styles/main.scss */
+/* line 30, ../../app/styles/main.scss */
 .top-padding {
   padding-top: 10px;
 }
 
-/* line 33, ../../app/styles/main.scss */
+/* line 35, ../../app/styles/main.scss */
 .left-padding {
   padding-left: 10px;
 }
 
-/* line 37, ../../app/styles/main.scss */
+/* line 39, ../../app/styles/main.scss */
 .full-width {
   width: 100%;
 }
 
-/* line 41, ../../app/styles/main.scss */
+/* line 43, ../../app/styles/main.scss */
 .logo {
   font-family: 'Oldenburg', cursive;
   font-size: 36px;
 }
 
-/* line 46, ../../app/styles/main.scss */
+/* line 48, ../../app/styles/main.scss */
 .links {
   font-family: 'Numans', sans-serif;
   display: inline;
   padding-right: 10px;
 }
 
-/* line 52, ../../app/styles/main.scss */
+/* line 54, ../../app/styles/main.scss */
 .text {
   font-family: 'Delius', cursive;
 }
 
-/* line 56, ../../app/styles/main.scss */
+/* line 58, ../../app/styles/main.scss */
 .color-one {
   color: #666666;
 }
 
-/* line 60, ../../app/styles/main.scss */
+/* line 62, ../../app/styles/main.scss */
 .color-two {
   color: #0066CC;
 }
 
-/* line 64, ../../app/styles/main.scss */
+/* line 66, ../../app/styles/main.scss */
 .char1 {
   color: #666666;
 }
 
-/* line 68, ../../app/styles/main.scss */
+/* line 70, ../../app/styles/main.scss */
 .char2 {
   color: #0066CC;
 }
 
-/* line 72, ../../app/styles/main.scss */
+/* line 74, ../../app/styles/main.scss */
 .char3 {
   color: #666666;
 }
 
-/* line 76, ../../app/styles/main.scss */
+/* line 78, ../../app/styles/main.scss */
 .char4 {
   color: #0066CC;
 }
 
-/* line 79, ../../app/styles/main.scss */
+/* line 81, ../../app/styles/main.scss */
 .char5 {
   color: #666666;
 }
 
-/* line 83, ../../app/styles/main.scss */
+/* line 85, ../../app/styles/main.scss */
 .char6 {
   color: #0066CC;
 }
 
-/* line 87, ../../app/styles/main.scss */
+/* line 89, ../../app/styles/main.scss */
 .char7 {
   color: #666666;
 }
 
-/* line 91, ../../app/styles/main.scss */
+/* line 93, ../../app/styles/main.scss */
 ​
 input[type=custom] {
   border: none;

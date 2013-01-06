@@ -1,0 +1,29 @@
+!!! 5
+include head
+
+body(ng-app='angularApp', class='ng-cloak')
+	.container-fluid
+		.row-fluid.top-padding.left-padding
+			
+			//Logo
+			.span3
+				.logo Invoize
+			
+			//Main Links
+			.span5
+				ul
+					li.links
+						a(href="#") Contact Us
+					li.links
+						a(href="#") About Us
+					li.links
+						a(href="#") Help
+
+			//Login Section , ng-init="init()"
+			div(ng-controller="LoginCtrl", class="span4 pull-right")
+				div(ng-switch,on='loginStatus()') 
+					div(ng-switch-when='false', ng-include, src="'login_form.html'")
+						
+					div(ng-switch-when='true', ng-include, src="'profile_links.html'")
+						
+

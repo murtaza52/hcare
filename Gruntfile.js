@@ -14,7 +14,7 @@ module.exports = function( grunt ) {
       html: {
         src: ['app/jade/*.jade', 'app/jade/**/*.jade',
         'app/jade/!_*.jade', 'app/jade/**/!_*.jade'],
-        dest: 'app/views/',
+        dest: 'app',
         options: {
           client: false,
           basePath: 'app/jade',
