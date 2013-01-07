@@ -6,16 +6,6 @@ angularApp.controller('LoginCtrl', function($scope, currentUser){
     return currentUser.isLoggedIn();
   };
 
-  //$scope.loginStatus = currentUser.isUserLoggedIn;
-
-/*  $scope.$on('login', function(event, args) {
-    $scope.userName = args.name;
-  }); 
-
-  $scope.$on('logout', function(event, args) {
-    $scope.isLoggedIn = false;
-  });*/
-
   $scope.login = function(email, password){
   	currentUser.login(email, password);
   };

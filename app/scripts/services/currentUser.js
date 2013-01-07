@@ -12,8 +12,7 @@ angularApp.factory('currentUser', function($rootScope) {
   // Public API here
   return {
     login: function(email, password){
-      isUserLoggedIn = true;
-      /*var user = allUsers[email];
+      var user = allUsers[email];
       var storedPass = user.password;
 
       if(storedPass === password){
@@ -24,7 +23,7 @@ angularApp.factory('currentUser', function($rootScope) {
       {
         return false;
       }
-*/    },
+    },
     logout: function(){
       $rootScope.$broadcast('logout');
       isUserLoggedIn = false;
@@ -34,31 +33,5 @@ angularApp.factory('currentUser', function($rootScope) {
     isLoggedIn: function(){
       return isUserLoggedIn;
     }
-  /*
-
-    login: function(email, password){
-    	var user = allUsers[email];
-    	var storedPass = user.password;
-
-	  	if(storedPass === password){
-	  		$rootScope.$broadcast('login', user);
-        isUserLoggedIn = true;
-	  		return true;
-  		}
-  		else
-  		{
-  			return false;
-  		}
-    },
-
-    logout: function(){
-    	$rootScope.$broadcast('logout');
-      isUserLoggedIn = false;
-    },
-
-    isLoggedIn: function(){
-      return isUserLoggedIn;
-    }
-
-  */};
+  };
 });
