@@ -1,5 +1,5 @@
-form.form-inline
+form.form-inline(ng-submit="login(userEmail, userPassword)") 
 	input(type="text", placeholder="Email", ng-model='userEmail', class='input-small')
 	input(type="password", placeholder="Password", ng-model='userPassword', class='input-small')
-	button(type='submit', ng-click="login(userEmail, userPassword)", class="btn")
+	button(type='submit', class="btn")
 		|Sign In

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <!--build:js scripts/scripts.js-->
+  <script src="components/jquery/jquery.min.js"></script>
   <script src="scripts/vendor/angular.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
@@ -29,7 +30,7 @@
           <li class="links"><a href="#">Help</a></li>
         </ul>
       </div>
-      <!--Login Section , ng-init="init()"-->
+      <!--Login Section-->
       <div ng-controller="LoginCtrl" class="span4 pull-right">
         <div ng-switch on="loginStatus()"> 
           <div ng-switch-when="false" ng-include src="'login_form.html'"></div>

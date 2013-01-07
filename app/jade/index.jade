@@ -19,7 +19,7 @@ body(ng-app='angularApp', class='ng-cloak')
 					li.links
 						a(href="#") Help
 
-			//Login Section , ng-init="init()"
+			//Login Section
 			div(ng-controller="LoginCtrl", class="span4 pull-right")
 				div(ng-switch,on='loginStatus()') 
 					div(ng-switch-when='false', ng-include, src="'login_form.html'")

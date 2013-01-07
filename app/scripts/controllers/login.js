@@ -2,9 +2,11 @@
 
 angularApp.controller('LoginCtrl', function($scope, currentUser){
   
-  $scope.loginStatus = function(){
+  $scope.loginStatus = function() {
     return currentUser.isLoggedIn();
   };
+
+  //$scope.loginStatus = currentUser.isUserLoggedIn;
 
 /*  $scope.$on('login', function(event, args) {
     $scope.userName = args.name;
