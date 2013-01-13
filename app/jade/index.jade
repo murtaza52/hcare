@@ -1,29 +1,47 @@
-!!! 5
-include head
+!!! html
+html(lang='en')
+  include head
+  body(ng-app='angularApp', class='ng-cloak')
+    div(ng-switch, on="isLoggedIn()", ng-controller="MainCtrl")
+        div(ng-switch-when="true", ng-include='home')
+        div(ng-switch-when="false", ng-include='landing')
 
-body(ng-app='angularApp', class='ng-cloak')
-	.container-fluid
-		.row-fluid.top-padding.left-padding
-			
-			//Logo
-			.span3
-				.logo Invoize
-			
-			//Main Links
-			.span5
-				ul
-					li.links
-						a(href="#") Contact Us
-					li.links
-						a(href="#") About Us
-					li.links
-						a(href="#") Help
+        //- div(ng-controller="LoginCtrl", class="span4")
+    //-   div(ng-switch,on='loginStatus()') 
+    //-     div(ng-switch-when='false', ng-include, src="'landing.html'")             
+    //-     div(ng-switch-when='true', ng-include, src="'home.html'")  
 
-			//Login Section
-			div(ng-controller="LoginCtrl", class="span4 pull-right")
-				div(ng-switch,on='loginStatus()') 
-					div(ng-switch-when='false', ng-include, src="'login_form.html'")
-						
-					div(ng-switch-when='true', ng-include, src="'profile_links.html'")
-						
+    
 
+        //- .marketing
+        //-   h1 Invoize
+        //-   p.marketing-byline
+        //-   .row-fluid
+        //-     .span4
+        //-       img.marketing-img(src='assets/img/bs-docs-twitter-github.png')
+        //-       h2 By nerds, for nerds.
+        //-       p
+        //-         | Built at Twitter by
+        //-         a(href='http://twitter.com/mdo') @mdo
+        //-         | and
+        //-         a(href='http://twitter.com/fat') @fat
+        //-         | , Bootstrap utilizes
+        //-         a(href='http://lesscss.org') LESS CSS
+        //-         | , is compiled via
+        //-         a(href='http://nodejs.org') Node
+        //-         | , and is managed through
+        //-         a(href='http://github.com') GitHub
+        //-         | to help nerds do awesome stuff on the web.
+        //-     .span4
+        //-       img.marketing-img(src='assets/img/bs-docs-responsive-illustrations.png')
+        //-       h2 Made for everyone.
+        //-       p
+        //-         | Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via
+        //-         a(href='./scaffolding.html#responsive') responsive CSS
+        //-         | as well.
+        //-     .span4(ng-controller='LoginCtrl')
+        //-       include login_form
+        //-       h2
+        //-         | &nbsp
+        //-         p
+          hr.soften

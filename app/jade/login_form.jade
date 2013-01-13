@@ -1,5 +1,27 @@
-form.form-inline(ng-submit="login(userEmail, userPassword)") 
-	input(type="text", placeholder="Email", ng-model='userEmail', class='input-small')
-	input(type="password", placeholder="Password", ng-model='userPassword', class='input-small')
-	button(type='submit', class="btn")
-		|Sign In
+
+
+form.form-inline(ng-submit="login(userEmail, userPassword)")
+	input(type="text", placeholder="Email", ng-model='userEmail', class='span2')
+	input(type="password", placeholder="Password", ng-model='userPassword', class='span2')
+	button.btn.btn-primary(type='submit') 
+		|Submit
+
+//- form
+//- 	.control-group
+//- 		.controls
+//- 			.input-prepend
+//- 				span.add-on
+//- 					i.icon-envelope
+//- 				input#inputIcon.span3(type='text', placeholder='Email address')
+//- 	.control-group
+//- 		.controls
+//- 			.input-prepend
+//- 				span.add-on
+//- 					i.icon-key
+//- 				input#inputIcon2.span3(type='password', placeholder='Password')
+
+//- form.form-inline(ng-submit="login(userEmail, userPassword)") 
+//- 	input(type="text", placeholder="Email", ng-model='userEmail', class='input-small')
+//- 	input(type="password", placeholder="Password", ng-model='userPassword', class='input-small')
+//- 	button(type='submit', class="btn")
+//- 		|Sign In

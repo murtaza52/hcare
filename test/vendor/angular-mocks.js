@@ -1,7 +1,7 @@
 
 /**
  * @license AngularJS v1.0.1
- * (c) 2010-2012 Google, Inc. http://angularjs.org
+ * (c) 2010-2012 Google, Inc. http://angularjs.orgin
  * License: MIT
  *
  * TODO(vojta): wrap whole file into closure during build

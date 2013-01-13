@@ -1,21 +1,17 @@
-'use strict';
+(function() {
+  var root;
 
-var angularApp = angular.module('angularApp', []);
-/*  .config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+  root = typeof exports !== "undefined" && exports !== null ? exports : this;
+
+  root.angularApp = angular.module("angularApp", []).config([
+    "$routeProvider", function($routeProvider, $locationProvider) {
+      return $routeProvider.when("/admin", {
+        templateUrl: "records_admin.html"
+      }).when("/record", {
+        templateUrl: "patient_records.html"
+        //controller: RecordsCtrl
       });
-  }]);*/
+    }
+  ]);
 
-/*angularApp.run(function($rootScope){
-  // $rootScope.$on('login', function(event, msg){
-  //   $rootScope.$broadcast('login', msg);
-  // });
-});*/
-
-
-      //.otherwise({
-      //  redirectTo: '/'
-      //});
+}).call(this);

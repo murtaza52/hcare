@@ -1,10 +1,26 @@
 //build:js scripts/scripts.js
 
+link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Cantata+One")
+link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Muli")
+
+//remove in prod
 script(src='components/jquery/jquery.min.js')
+
+script(src='components/Lettering.js/jquery.lettering.js')
+
+//account chooser
+//- script(type="text/javascript", src="https://www.accountchooser.com/ac.js")
+
+//- script(type="text/javascript")
+//- 	accountchooser.CONFIG.loginUrl = "/";
+
 script(src='scripts/vendor/angular.js')
 script(src='scripts/app.js')
 script(src='scripts/controllers/main.js')
 script(src='scripts/controllers/login.js')
+script(src='scripts/controllers/admin.js')
 script(src='scripts/services/currentUser.js')
+
+script(src='scripts/controllers/records.js')
 
 //endbuild

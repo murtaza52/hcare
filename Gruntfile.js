@@ -74,7 +74,7 @@ module.exports = function( grunt ) {
           'app/jade/*.jade',
           'app/jade/**/*.jade'
         ],
-        tasks: 'jade'
+        tasks: 'jade reload'
       },
       reload: {
         files: [

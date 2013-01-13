@@ -1,13 +1,14 @@
 'use strict';
 
-angularApp.controller('LoginCtrl', function($scope, currentUser){
-  
-  $scope.loginStatus = function() {
-    return currentUser.isLoggedIn();
+angularApp.controller('LoginCtrl', function($scope, currentUser, $location){
+
+  $scope.getUser = function(){
+    return currentUser.user();
   };
 
   $scope.login = function(email, password){
-  	currentUser.login(email, password);
+  	if(currentUser.login(email, password))
+      $location.path('/record')  
   };
 
   $scope.logout = function(){
@@ -15,3 +16,4 @@ angularApp.controller('LoginCtrl', function($scope, currentUser){
   };
 
 });
+
